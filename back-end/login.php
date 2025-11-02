@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require __DIR__ . '/bootstrap.php';
 
 try {
@@ -38,11 +40,10 @@ try {
 
     // Validate password
     if (!password_verify($password, $user['password'])) {
-        throw new Exception('Invalid login');
-    }
+    echo json_encode(['success' => false, 'error' => 'Invalid login']); exit;
+}
 
     $_SESSION['user_id'] = $user['id'];
-
     echo json_encode(['success'=>true]);
 } catch (Throwable $e) {
     echo json_encode(['success'=>false, 'error'=>$e->getMessage()]);

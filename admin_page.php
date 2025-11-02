@@ -65,6 +65,7 @@ $('#loginForm').on('submit', function(e){
     if (res.success) {
       location.href = '/';
     } else {
+      console.log('Login error:', res);
       $('#loginMsg').text(res.error);
     }
   }, 'json');
