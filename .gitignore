@@ -1,0 +1,22 @@
+cat > .gitignore << 'EOF'
+# OS
+.DS_Store
+Thumbs.db
+
+# Node/build (if ever used)
+node_modules/
+dist/
+build/
+
+# PHP/Composer (if used later)
+vendor/
+composer.lock
+
+# Env/secrets
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+EOF
