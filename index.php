@@ -136,7 +136,9 @@ session_start();
 
         <div class="col-lg-6 reveal t-r" style="direction: rtl;">
           <h2 class="section-title">من نحن</h2>
-          <p class="section-sub">منظمة انسانية أسست لجمع التبرعات المالية والعينية من اهل الخير والعطاء لتقديمها للمحتاجين والفقراء.</p>
+          <p class="section-sub">طريق الرحمة: منظمة خيرية ناشئة، غير ربحية، أسست لمساعدة الفقراء والمساكين واليتامى ومن تقطعت بهم السبل في المجتمع.
+تهتم الجمعية بالأفراد والاسر المحتاجة، وبخاصة في شراء الأدوية والعلاجات الضرورية، وتطمح الى المساعدة في توفير السكن أو فرص عمل للفئات المستضعفة كالمعوقين والمنقطعين.
+          </p>
           <ul class="list-unstyled lead" style="margin-right: -45px !important">
             <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 100% transparency with regular reports</li>
             <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Donor‑first approach and secure payments</li>
@@ -471,6 +473,8 @@ session_start();
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/index.js"></script>
+  <?php if($_SESSION['user_id']) { ?>
   <script src="assets/js/be.js"></script>
+  <?php } ?>
 </body>
 </html>
